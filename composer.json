@@ -1,0 +1,53 @@
+{
+  "name": "rexlmanu/pterodactyl-wrapper",
+  "description": "Api wrapper for pterodactyl",
+  "keywords": [
+    "rexlmanu",
+    "pterodactyl"
+  ],
+  "homepage": "https://github.com/rexlmanu/pterodactyl-api",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Emmanuel Lampe",
+      "email": "rexlmanude@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.4",
+    "illuminate/support": "^8.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^6.4",
+    "phpunit/phpunit": "^9.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "RexlManu\\Pterodactyl\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "RexlManu\\Pterodactyl\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "RexlManu\\Pterodactyl\\PterodactylServiceProvider"
+      ],
+      "aliases": {
+        "Pterodactyl": "RexlManu\\Pterodactyl\\Facades\\Pterodactyl"
+      }
+    }
+  }
+}
