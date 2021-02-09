@@ -11,6 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
@@ -143,6 +144,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610329452810</updated>
       <workItem from="1610329453873" duration="7255000" />
+      <workItem from="1612886147368" duration="36000" />
     </task>
     <servers />
   </component>

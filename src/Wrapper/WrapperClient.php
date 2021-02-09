@@ -4,6 +4,7 @@ namespace RexlManu\Pterodactyl\Wrapper;
 
 use Exception;
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\RequestOptions;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
@@ -42,13 +43,17 @@ class WrapperClient
 
   public function request($method, $endpoint, $data)
   {
-    $response = $this->client->request($method, $this->buildUrl($endpoint), [
-      RequestOptions::FORM_PARAMS => $data,
-      RequestOptions::HEADERS => [
-        'Content-Type' => 'application/json',
-        'Authorization' => "Bearer $this->token"
-      ],
-    ]);
+    try {
+      $response = $this->client->request($method, $this->buildUrl($endpoint), [
+        RequestOptions::BODY => json_encode($data),
+        RequestOptions::HEADERS => [
+          'Content-Type' => 'application/json',
+          'Authorization' => "Bearer $this->token"
+        ],
+      ]);
+    } catch (ClientException $e) {
+      $response = $e->getResponse();
+    }
     $responseJson = json_decode($response->getBody()->getContents(), true);
     if (is_null($responseJson)) {
       $responseJson = [];
