@@ -43,19 +43,19 @@ class WrapperClient
   public function request($method, $endpoint, $data)
   {
     $response = $this->client->request($method, $this->buildUrl($endpoint), [
-      RequestOptions::BODY => $data,
+      RequestOptions::FORM_PARAMS => $data,
       RequestOptions::HEADERS => [
-        'Content-Type' => 'application/json'
-      ]
+        'Content-Type' => 'application/json',
+        'Authorization' => "Bearer $this->token"
+      ],
     ]);
-    $responseJson = $response->getBody();
+    $responseJson = json_decode($response->getBody()->getContents(), true);
     if (is_null($responseJson)) {
       $responseJson = [];
     }
     $responseJson[ 'status' ] = $response->getStatusCode();
     return json_decode(json_encode(ConvertHelper::convert($responseJson)));
   }
-
 
   public function __call($name, $arguments)
   {
