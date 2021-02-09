@@ -4,6 +4,7 @@ namespace RexlManu\Pterodactyl\Wrapper;
 
 use Exception;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 use RexlManu\Pterodactyl\Helper\ConvertHelper;
 
 class WrapperClient
@@ -22,7 +23,7 @@ class WrapperClient
   {
     $this->token = $token;
     $this->section = $section;
-    if (! str_ends_with(config('pterodactyl.auth.host'), '/') && ! str_starts_with($this->section, '/')) {
+    if (! Str::endsWith(config('pterodactyl.auth.host'), '/') && ! Str::endsWith($this->section, '/')) {
       $this->section = '/' . $this->section;
     }
   }

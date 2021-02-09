@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ChangeListManager">
-    <list default="true" id="4d6196e8-9604-41e9-8bdd-7a5f32bf2935" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Wrapper/WrapperClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Wrapper/WrapperClient.php" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ComposerSettings">
-    <execution />
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/laravel/framework" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
@@ -118,54 +101,10 @@
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1mu33wqog7GRNNINTT3ZU4I1AZa" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Facades" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Emman\Desktop\Workspace\pterodactyl-api\src\Facades" />
-      <recent name="C:\Users\Emman\Desktop\Workspace\pterodactyl-api\src\Sections" />
-    </key>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="4d6196e8-9604-41e9-8bdd-7a5f32bf2935" name="Default Changelist" comment="" />
-      <created>1610329452810</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1610329452810</updated>
-      <workItem from="1610329453873" duration="7255000" />
-    </task>
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1901" y="282" key="#com.intellij.ide.util.MemberChooser" timestamp="1610331905628">
-      <screen x="0" y="40" width="3840" height="1040" />
-    </state>
-    <state x="1901" y="282" key="#com.intellij.ide.util.MemberChooser/-1080.-793.1080.1880/0.40.3840.1040/1465.-1080.1920.1040@0.40.3840.1040" timestamp="1610331905628" />
-    <state x="2043" y="315" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610333152365">
-      <screen x="0" y="40" width="3840" height="1040" />
-    </state>
-    <state x="2043" y="315" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1080.-793.1080.1880/0.40.3840.1040/1465.-1080.1920.1040@0.40.3840.1040" timestamp="1610333152365" />
-    <state x="2044" y="261" key="NewPhpClassDialog" timestamp="1610333867709">
-      <screen x="0" y="40" width="3840" height="1040" />
-    </state>
-    <state x="2044" y="261" key="NewPhpClassDialog/-1080.-793.1080.1880/0.40.3840.1040/1465.-1080.1920.1040@0.40.3840.1040" timestamp="1610333867709" />
-    <state x="1913" y="485" key="NewPhpFileDialog" timestamp="1610329736398">
-      <screen x="0" y="40" width="3840" height="1040" />
-    </state>
-    <state x="1913" y="485" key="NewPhpFileDialog/-1080.-793.1080.1880/0.40.3840.1040/1465.-1080.1920.1040@0.40.3840.1040" timestamp="1610329736398" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" />
+    </phpunit_settings>
   </component>
 </project>
