@@ -1,5 +1,5 @@
 {
-  "name": "rexlmanu/pterodactyl-wrapper",
+  "name": "rene-roscher/pterodactyl-wrapper",
   "description": "Api wrapper for pterodactyl",
   "keywords": [
     "rexlmanu",
@@ -16,7 +16,7 @@
     }
   ],
   "require": {
-    "php": "^7.4",
+    "php": "^7.4|^8.0",
     "illuminate/support": "^8.0|^7.0|^6.0|^5.0"
   },
   "require-dev": {
