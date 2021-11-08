@@ -35,7 +35,7 @@ class WrapperClient
     return config('pterodactyl.auth.host') . '/api' . $this->section . $endpoint;
   }
 
-  public function request($method, $endpoint, $data, $json = true)
+  public function request($method, $endpoint, $data, $json)
   {
     $response = Http::withToken($this->token)
       ->contentType('application/json')
@@ -57,7 +57,10 @@ class WrapperClient
     if (count($arguments) == 1) {
       $arguments[ 1 ] = [];
     }
-    return $this->request($name, $arguments[ 0 ], $arguments[ 1 ]);
+    if (count($arguments) < 3) {
+      $arguments[ 2 ] = true;
+    }
+    return $this->request($name, $arguments[ 0 ], $arguments[ 1 ], $arguments[2]);
   }
 
 
