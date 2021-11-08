@@ -40,12 +40,15 @@ class WrapperClient
     $response = Http::withToken($this->token)
       ->contentType('application/json')
       ->{$method}($this->buildUrl($endpoint), $data);
-    $responseJson = $response->{$json ? 'json' : 'body'}();
-    if (is_null($responseJson)) {
-      $responseJson = [];
+    $responseData = $response->{$json ? 'json' : 'body'}();
+    if ($json) {
+        if (is_null($responseData)) {
+            $responseData = [];
+        }
+        $responseData[ 'status' ] = $response->status();
+        return json_decode(json_encode(ConvertHelper::convert($responseData)));
     }
-    $responseJson[ 'status' ] = $response->status();
-    return json_decode(json_encode(ConvertHelper::convert($responseJson)));
+    return $responseData;
   }
 
 
