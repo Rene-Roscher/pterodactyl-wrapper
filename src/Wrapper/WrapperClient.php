@@ -35,12 +35,12 @@ class WrapperClient
     return config('pterodactyl.auth.host') . '/api' . $this->section . $endpoint;
   }
 
-  public function request($method, $endpoint, $data)
+  public function request($method, $endpoint, $data, $json = true)
   {
     $response = Http::withToken($this->token)
       ->contentType('application/json')
       ->{$method}($this->buildUrl($endpoint), $data);
-    $responseJson = $response->json();
+    $responseJson = $response->{$json ? 'json' : 'body'}();
     if (is_null($responseJson)) {
       $responseJson = [];
     }
